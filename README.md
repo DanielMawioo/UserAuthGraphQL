@@ -1,8 +1,8 @@
-# Django and GraphQL RestAPI QuizzesApi app
+# Django and GraphQl all auth users-mgt backend-app
 
 ## Description
 
-The Quizzes API using django backend and GraphQL to create the rest endpoint
+The  App uses django backend and GraphQL to create the rest endpoints for user accounts management
 
 - Query any Quizzes available in the database using a single endpoint
 
@@ -12,6 +12,8 @@ Created on, April 8th 2021
 
 - Django
 - Django_graphene ##GraphQl
+- Django_graphene_jwt
+- Django_graphene_allauth
 - Git
 
 ## Development and Setup.
@@ -20,7 +22,7 @@ Created on, April 8th 2021
 
 - Python 3.8+ should be installed
 - django 3.0 +
-- install django graphene
+- install django graphene && graphene-jwt && graphene-allauth
 
 ### Installation.
 
@@ -37,38 +39,19 @@ Created on, April 8th 2021
 
 Testing was done using python inbuild test tool called unittest to test database and form models.
 
-## Query
-{
-  allQuizzes {
-    edges {
-      node {
-        id
-        title
-      }
-    }
-  }
-  allQuestions(id: 1) {
-    title
-  }
-  allAnswers(id: 1) {
-    answerText
-  }
-}
-
-
-## Mutation
-mutation firstmutation{
-  updateCategory(name:"newcat"){
-    category{
-      name
-    }
-  }
-}
-
+## Functionalities
+- 1. Login
+- 2. Logout
+- 3. Authentication
+- 4. Signup with emai confirmation
+- 5. Change password
+- 6. Forgotten password via email confirmation
+- 7. Delete account
+- 8. Update account details
 
 ## Further help
 
-To get Further help you can visit the official python ,django, django_graphene documentation.
+To get Further help you can visit the official python ,django, django_graphene, django-graphene-allauth documentation.
 
 ## Licence
 
